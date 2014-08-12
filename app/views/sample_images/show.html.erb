@@ -5,7 +5,16 @@
   <%= @sample_image.name %>
 </p>
 
+<h1>Original</h1>
 <%= image_tag @sample_image.file.url %>
+<h2>300x300</h2>
+<%= image_tag @sample_image.file.thumb('300x300').url %>
+<h2>100x100</h2>
+<%= image_tag @sample_image.file.thumb('100x100').url %>
+<h2>50x50</h2>
+<%= image_tag @sample_image.file.thumb('50x50').url %>
 
+<div>
 <%= link_to 'Edit', edit_sample_image_path(@sample_image) %> |
 <%= link_to 'Back', sample_images_path %>
+</div>
