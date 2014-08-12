@@ -15,6 +15,7 @@ Dragonfly.app.configure do
       bucket_name: ENV['FOG_DIRECTORY'],
       access_key_id: ENV['AWS_ACCESS_KEY_ID'],
       secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
+    url_host ENV['CDN_URL']
   else
     datastore :file,
       root_path: Rails.root.join('public/system/dragonfly', Rails.env),
